@@ -1,0 +1,173 @@
+html, body {
+    background-color: #000;
+    margin: 0px;
+    padding: 0px;
+}
+
+:global(html), head {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@font-face {
+    font-family: 'MICR Encoding';
+    src: url('./microenc.tff') format('ttf'),
+        url('./MICREncoding.woff2') format('woff2'),
+        url('./MICREncoding.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    font-family: ExoRegular, Arial, Helvetica, sans-serif;
+    color: #00ff00;
+    margin: 0px;
+    padding: 0px;
+}   
+
+.contentcontainer {
+    background-color: #000;
+    border: 2px solid #00ff00;
+    border-radius: 10px;
+    width: min(800px, 90vw);
+    height: min(476px, 90vh);
+    overflow: scroll;
+}
+
+.contentitems {
+    margin: 4vw;
+    display: flex;
+    flex-flow: column;
+}
+
+label {
+    cursor: default;
+}
+
+
+input[type="text"], input[type="password"] {
+    padding: 12px;
+    margin-bottom: 2vh;
+    font-size: 16px;
+    height: 12px;
+    width: 90%;
+    text-align: left;
+    color: #000;
+    background-color: #00ff00;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    border-radius: 25px;
+}
+
+input[type=file] {
+    overflow: visible;
+}
+
+input[type="submit"], input[type=file]::file-selector-button {
+    overflow: visible;
+    text-align: center;
+    padding: 2px;
+    margin-bottom: 8px;
+    border-radius: 25px;
+    height: 32px;
+    min-width: 100px;
+    font-size: 16px;
+    border: 2px solid #00ff00;
+    background-color: transparent;
+    color: #00ff00;
+    text-align: center;
+    cursor: pointer;
+    pointer-events: auto;
+    transition: all .2s ease-in-out;
+    animation: fadeIn .5s;
+    -webkit-animation: fadeIn .5s;
+    -moz-animation: fadeIn .5s;
+    -o-animation: fadeIn .5s;
+    -ms-animation: fadeIn .5s;
+}
+
+input[type="submit"]:disabled, input[type=file]:disabled::file-selector-button {
+    color: #00ff00;
+}
+
+input[type="submit"]:not(:focus-visible), input[type=file]:not(:focus-visible)::file-selector-button {
+    border: 2px solid #00ff00;
+}
+
+@media(hover: hover) {
+    input[type="submit"]:hover, input[type="submit"]:focus-visible {
+        transform: scale(1.05);
+        -webkit-transform: scale(1.05);
+        -moz-transform: scale(1.05);
+        -o-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+    }
+}
+
+@media(hover: hover) {
+    input[type=file]:hover::file-selector-button, input[type=file]:focus-visible::file-selector-button {
+        transform: scale(1.05);
+        -webkit-transform: scale(1.05);
+        -moz-transform: scale(1.05);
+        -o-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+    }
+}
+
+input[type="submit"]:active, input[type=file]:active::file-selector-button {
+    transform: scale(0.95);
+    -webkit-transform: scale(0.95);
+    -moz-transform: scale(0.95);
+    -o-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+}
+
+.error {
+    color: #ff0000;
+}
+
+nav {
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+
+.mediawrapper {
+    height: 132px;
+    max-width: 248px;
+    min-width: 24px;
+    overflow: hidden;
+    font-size: 12px;
+    padding: 4px;
+}
+.imagebuttonholder {
+    display: flex;
+    justify-content: center;
+}
+
+input[type="submit"].x {
+    height: 24px;
+    min-width: 24px;
+    justify-self: center;
+    text-align: center;
+}
+
+#gallery {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+table {
+    text-align: center;
+}
